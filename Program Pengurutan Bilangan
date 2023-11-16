@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int isi,kosong = 0,bor;
+
+    
+    //ini buat input data Ke array om
+    cout<<"input Jumlah data: ",cin>>bor;
+    int angka[bor];
+    
+    for(isi=0;isi<bor;isi++){
+      cout<<"Input data cuy: ",cin>>angka[isi];
+  }
+
+      //ini buat nampilin data array nya
+    cout<<"\nRAW data: ";
+    for(int i=0;i<bor;i++){
+    cout<<angka[i]<<" ";}
+    
+    //ini program buat urutin data arraynya, btw kalo mau ngubah cara urut datanya tinggal ubah tanda '>' ke '<' dalam if
+    for(int uma=0;uma<bor-1;uma++){
+       for(int jordi=0;jordi<bor-uma-1;jordi++){
+          if(angka[jordi] > angka[jordi+1]){
+              kosong = angka[jordi];
+              angka[jordi] = angka[jordi+1];
+              angka[jordi+1] = kosong;
+            }
+       }
+    }cout<<endl;
+    
+    //ini buat nampilin hasil data yg udh di proses programnya
+    cout<<"--------------------------------";
+    cout<<"\nudah disorting: ";
+    for(int budi=0;budi<bor;budi++){
+    cout<<angka[budi]<<" ";
+  }cout<<endl;
+    
+    }
